@@ -4,6 +4,12 @@ public class MainClass
 {
     public static void Main()
     {
+        PlayTicTacToe();
+    }
+
+
+    static void PlayTicTacToe()
+    {
         string[,] map =
         {
             { "1", "2", "3" },
@@ -35,7 +41,7 @@ public class MainClass
                 }
             }
             else
-            {            
+            {
                 Console.WriteLine("Ходят нолики");
                 PrintMap(map);
                 Console.WriteLine("Введите цифру вашего хода:\n");
@@ -54,7 +60,7 @@ public class MainClass
             }
 
 
-            if (i==8 && !HasWinner(map))
+            if (i == 8 && !HasWinner(map))
             {
                 Console.WriteLine("Ничья!");
                 break;
