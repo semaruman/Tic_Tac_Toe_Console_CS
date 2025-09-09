@@ -4,10 +4,36 @@ public class MainClass
 {
     public static void Main()
     {
-        PlayTicTacToe();
+        Menu();
     }
 
 
+    // Функция для вывода меню
+    static void Menu()
+    {
+        string menu_string;
+
+        Console.WriteLine("\tВыберете опцию:\t");
+        Console.WriteLine("1 - запустить игру");
+        Console.WriteLine("Другое - выход из игры");
+        Console.WriteLine();
+        menu_string = Console.ReadLine();
+        if (menu_string == "1")
+        {
+            PlayTicTacToe();
+            Console.WriteLine("Введите что-нибудь для перехода в меню...");
+            Console.ReadLine();
+            Console.Clear();
+            Menu();
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
+    // Функция для активации геймплея
     static void PlayTicTacToe()
     {
         string[,] map =
